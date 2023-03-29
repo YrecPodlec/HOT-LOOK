@@ -1,0 +1,33 @@
+@font-face {
+    font-family: hot_look;
+    src: url("../assets/FRACTAL.ttf") format('truetype');
+}
+body {
+    background: linear-gradient(255.68deg, #1F0022 0%, #1E0000 100%);
+    color: wheat;
+    font-family: hot_look;
+    letter-spacing: 3px;
+}
+.logo{
+    background-image: url(".././assets/svg_hot_look.svg");
+    background-size: cover;
+    width: 40px;
+    height: 40px;
+}
+.component_css{
+    margin-left: 65px;
+    margin-right: 65px;
+}
+.blocks_line_background{
+    position: fixed;
+    width: 100vw;
+    z-index: -999;
+    display: flex;
+    justify-content: space-around;
+    opacity: .4;
+}
+.line_back{
+    width: .05vw;
+    height: 100vh;
+    background-color: white;
+}

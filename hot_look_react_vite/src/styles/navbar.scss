@@ -1,0 +1,112 @@
+.link_navbar {
+  font-weight: bold;
+  border-radius: .7vw;
+  position: relative;
+  text-decoration: none;
+  transition: all .4s ease-in-out;
+  background-color: rgba(0, 0, 0, .7);
+  &::after {
+    opacity: 0;
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: -.125em;
+    left: -.120em;
+    width: calc(100% + .25vw);
+    height: calc(100% + .5vh);
+    border-radius: .7vw;
+    background-image: linear-gradient(45deg,#f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+    background-size: 200%;
+    animation: animateborder 3s ease infinite paused;
+    transition: all .6s ease-in-out;
+  }
+  &:hover {
+    background-color: #100e0e;
+    &::after {
+      animation-play-state: running;
+      opacity: 1;
+    }
+  }
+}
+
+@keyframes animateborder {
+  0% {
+    background-position: 0;
+  }
+  50% {
+    background-position: 100%;
+  }
+  100% {
+    background-position: 0;
+  }
+}
+.navbar_menu_adapt{
+  display: none;
+  &>.navbar_list_menu{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 65vw;
+    &>.block_nav_menu{
+      margin: 0 auto;
+    }
+    &>.block_nav_menu>.link_navbar_menu{
+      width: 250px;
+      text-align: center;
+      margin-top: 1vh;
+      margin-bottom: 1vh;
+      border-radius: 15px;
+      background-color: black;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
+  }
+}
+
+.burger-menu{
+  height: 4vh;
+  width: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.burger-bar{
+  width: 50px;
+  height: .7vh;
+  background-color: white;
+  border-radius: .5em;
+}
+.burger-bar.clicked:nth-child(1){
+  transform: rotate(45deg) translate(.3em, .9em);
+  transition: ease-in-out .5s;
+}
+.burger-bar.clicked:nth-child(2){
+  scale: .1;
+  transition: ease-in-out .5s;
+}
+.burger-bar.clicked:nth-child(3){
+  transform: rotate(135deg) translate(-.5em, 1em);
+  transition: ease-in-out .5s;
+}
+.burger-bar.unclicked{
+  transform: rotate(0) translate(0);
+  transition: ease-in-out .5s;
+}
+
+//ADAPT MENU
+.burger-menu{
+  display: none;
+}
+@media (max-width: 1090px) {
+  .navigation_pc{
+    display: none;
+  }
+  .burger-menu{
+    display: flex;
+  }
+  .navbar_menu_adapt{
+    display: flex;
+  }
+}
