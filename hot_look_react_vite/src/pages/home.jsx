@@ -1,15 +1,23 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import SvgWave1 from '../components/svgs/svg_wave_1.jsx'
 const Home = () => {
+    const [offsetY, setOffsetY] = useState(0);
+    const handleScroll = () => setOffsetY(window.pageYOffset);
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, [])
     return (
-        <div className="main_home_page">
+        <div className="main_home_page" style={{overflow: "hidden"}}>
             {/*BLOCK 1*/}
             <div className="home_block1 home_page_block">
                 {/*BLOCK INTO BLOCK 1*/}
                 <div className="block_into_block1">
                     {/*BLOCK 1 RIGHT*/}
                     <div className="block_1_block1_home home_blocks_lr">
-                        <div className="text_home_block_1">
+                        <div className="text_home_block_1"
+                             style={{transform: `translateX(-${offsetY *0.6}px)`}}
+                        >
                             <h1>HOT LOOK</h1>
                             <p>
                                 From casual to elegant, HOT LOOK has a
@@ -24,8 +32,11 @@ const Home = () => {
                         </div>
                     </div>
                     {/*BLOCK 1 LEFT*/}
-                    <div className="block_1_block2_home home_blocks_lr">
-                        <div className="girl_box">
+                    <div className="block_1_block2_home home_blocks_lr"
+                    style={{zIndex: -10}}>
+                        <div className="girl_box"
+                             style={{transform: `translateX(${offsetY *0.4}px)`}}
+                        >
                             <div className="girl_box_img" style={{zIndex: "-7"}}></div>
                         </div>
                     </div>
