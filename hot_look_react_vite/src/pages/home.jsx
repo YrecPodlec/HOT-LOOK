@@ -1,7 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import SvgWave1 from '../components/svgs/svg_wave_1.jsx'
+import SvgWave2 from "../components/svgs/svg_wave_2.jsx";
 const Home = () => {
-    const [offsetY, setOffsetY] = useState(0);
+    const [offsetY, setOffsetY] = useState(1);
     const handleScroll = () => setOffsetY(window.pageYOffset);
     useEffect(() => {
         window.addEventListener('scroll', handleScroll);
@@ -15,20 +16,45 @@ const Home = () => {
                 <div className="block_into_block1">
                     {/*BLOCK 1 RIGHT*/}
                     <div className="block_1_block1_home home_blocks_lr">
-                        <div className="text_home_block_1"
-                             style={{transform: `translateX(-${offsetY *0.6}px)`}}
-                        >
-                            <h1>HOT LOOK</h1>
-                            <p>
+                        <div className="text_home_block_1">
+                            <h1 style={{display: "flex", flexDirection: "row"}}>
+                                <div
+                                    style={{transform: `translateY(-${offsetY * .1}px)`}}
+                                >H</div>
+                                <div
+                                    style={{transform: `translateY(-${offsetY * .6}px)`}}
+                                >O</div>
+                                <div
+                                    style={{transform: `translateY(${offsetY * .4}px)`}}
+                                >T</div>
+                                <div
+                                    style={{transform: `translateY(-${offsetY * .2}px)`}}
+                                >L</div>
+                                <div
+                                    style={{transform: `translateY(${offsetY * .3}px)`}}
+                                >O</div>
+                                <div
+                                    style={{transform: `translateY(-${offsetY * .5}px)`}}
+                                >O</div>
+                                <div
+                                    style={{transform: `translateY(${offsetY * .4}px)`}}
+                                >K</div>
+                            </h1>
+                            <p
+                                style={{transform: `translateX(-${offsetY *1.9}px)`}}>
                                 From casual to elegant, HOT LOOK has a
                                 wide range of clothing styles that
                                 cater to every woman's taste, so explore
                                 our collection today and discover your
                                 perfect outfit for any occasion
                             </p>
-                            <a href="">
-                                Yuri Verbitsky Corp
-                            </a>
+                            <div className="container_a"
+                                 style={{transform: `translateX(${offsetY * .3}px)`}}
+                            >
+                                <a href="">
+                                    Yuri Verbitsky Corp
+                                </a>
+                            </div>
                         </div>
                     </div>
                     {/*BLOCK 1 LEFT*/}
@@ -48,7 +74,12 @@ const Home = () => {
             </div>
             {/*BLOCK 2*/}
             <div className="home_block2 home_page_block" style={{height: "100vh"}}>
-
+                {/*BLOCK INTO BLOCK 2*/}
+                <div className="block_into_block_2">
+                    <div style={{position: "absolute"}}>
+                        <SvgWave2/>
+                    </div>
+                </div>
             </div>
         </div>
     );
