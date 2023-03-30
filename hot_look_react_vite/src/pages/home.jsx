@@ -77,7 +77,7 @@ const Home = () => {
                 {/*BLOCK INTO BLOCK 2*/}
                 <div className="block_into_block_2">
                     <div style={{position: "absolute"}}>
-                        <SvgWave2/>
+                        {/*<SvgWave2/>*/}
                     </div>
                 </div>
             </div>
