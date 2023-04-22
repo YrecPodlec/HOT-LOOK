@@ -1,33 +1,61 @@
+$margin: 65px;
+$borderText: 4px solid #87F03C;
+$Font64: 64px;
+$Font32: 32px;
+$Font16: 16px;
+$letterspace200: 10px;
+$letterspace100: 3px;
 @font-face {
     font-family: hot_look;
     src: url("../assets/FRACTAL.ttf") format('truetype');
 }
 body {
-    background: linear-gradient(255.68deg, #1F0022 0%, #1E0000 100%);
+    background: linear-gradient(89.817854409483deg , rgba(39,0,10,255) 0%, rgba(36,0,33,255) 100%);
     color: wheat;
     font-family: hot_look;
     letter-spacing: 3px;
+
+    min-height: 120vh;
+
 }
-.logo{
-    background-image: url(".././assets/svg_hot_look.svg");
-    background-size: cover;
-    width: 40px;
-    height: 40px;
-}
-.component_css{
-    margin-left: 65px;
-    margin-right: 65px;
-}
-.blocks_line_background{
+.background_lines{
     position: fixed;
+    background: repeating-linear-gradient(
+                    to right,
+                    rgba(246, 186, 82, 0),
+                    rgba(246, 186, 82, 0) 200px,
+                    #ffffff 1px,
+                    rgb(255, 255, 255) 203px
+    );
     width: 100vw;
-    z-index: -999;
-    display: flex;
-    justify-content: space-around;
-    opacity: .4;
-}
-.line_back{
-    width: .05vw;
     height: 100vh;
-    background-color: white;
+    z-index: -999;
+    opacity: .5;
+}
+a{
+    color: white;
+    text-decoration: none;
+    font-size: $Font32;
+}
+a:hover{
+    color: #87F03C;
+    transition: all .3s ease-in-out;
+}
+h1, p{
+    cursor: default;
+}
+//SCROLL BAR
+::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+}
+::-webkit-scrollbar-thumb {
+    background: #e7003e;
+    border-radius: 50px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #5de100;
+}
+::-webkit-scrollbar-track {
+    background: #710067;
 }

@@ -1,0 +1,24 @@
+@import "../src/styles/index";
+.footerImg{
+  width: 100vw;
+}
+.footer_block{
+  background: transparent linear-gradient(100deg, rgba(243, 61, 110, 0.7) 0%, rgba(173, 0, 159, 0.7) 100%) 0 0 no-repeat padding-box;
+  width: 100vw;
+  padding-bottom: 10px;
+  margin-top: -.5vh;
+  display: flex;
+  justify-content: space-around;
+}
+.footer_content{
+  width: 30%;
+  border-top: $borderText;
+  margin-top: 5vh;
+  display: flex;
+  flex-direction: column;
+}
+.navigation_footer{
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+}

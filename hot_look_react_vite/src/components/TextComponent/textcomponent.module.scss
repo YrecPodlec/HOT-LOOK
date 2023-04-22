@@ -1,0 +1,13 @@
+@import "src/styles/index.scss";
+.hotlook_text{
+  h1{
+    font-size: $Font64;
+    letter-spacing: $letterspace200;
+    border-top: $borderText;
+  }
+  p{
+    font-size: $Font32;
+    border-bottom: $borderText;
+    letter-spacing: $letterspace100;
+  }
+}
