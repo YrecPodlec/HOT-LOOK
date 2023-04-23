@@ -1,7 +1,15 @@
-@import "src/styles/index";
+@import "../../../styles/index.scss";
 .mainBox{
   width: 100%;
 }
 .textComp{
   width: 50%;
 }
+.boxCards{
+  background-color: rgba(93, 225, 0, 0.32);
+  margin: $margin $margin 0 $margin;
+  display: flex;
+  justify-content: space-around;
+}
+
+// COLLECTIONS item

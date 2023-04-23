@@ -1,12 +1,16 @@
 {
-  "items": [
+  "collections": [
     {
       "id": 1,
-      "title": "askjdjasbdjasd"
+      "title": "ROMANTIC",
+      "photo": "/collections/1.jpg",
+      "description": "Romantic clothing is all about\nsoftness, femininity, and a touch of whimsy. This style\nfeatures flowing fabrics, ruffles, lace, and floral prints\nIt's perfect for those who want to add a touch of\ndreamy elegance to their wardrobe"
     },
     {
       "id": 2,
-      "title": "567890o98765rfgbhj"
+      "title": "RETRO",
+      "photo": "/collections/2.jpeg",
+      "description": "The retro style in clothing refers to fashion that is\ninspired by past eras, typically from the 1920s to the\n1990s. It often involves nostalgic elements such as\nvintage silhouettes, prints, and color palettes, with a\nmodern twist. Retro style is known for its unique and\nnostalgic charm, and is popular among those who\nappreciate fashion history and want to add a touch\nof vintage flair to their wardrobe"
     }
   ]
 }

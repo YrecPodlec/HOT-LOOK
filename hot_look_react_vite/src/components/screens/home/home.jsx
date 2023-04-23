@@ -71,7 +71,6 @@ const Home = () => {
     return (
         <main className={styles.home} style={{overflow: "hidden"}}>
             <div ref={myRef}></div>
-            asdasdasd
             {/*fixed right box*/}
             <div className={styles.fixedRightBox}>
                 <div style={{
@@ -233,7 +232,7 @@ const Home = () => {
                             initial="hidden"
                             whileInView="visible"
                             variants={GirlAnimation}>
-                    <img src="/collabWomans.svg" alt="" className={styles.collabGirl}/>
+                    <img src="/hot_look_react_vite/public/collabWomans.svg" alt="" className={styles.collabGirl}/>
                 </motion.div>
             </div>
         </main>

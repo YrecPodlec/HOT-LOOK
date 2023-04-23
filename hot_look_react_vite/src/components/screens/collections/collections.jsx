@@ -1,8 +1,17 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import styles from './Collections.module.scss';
 import TextComponent from "../../TextComponent/TextComponent.jsx";
-import CollectionItem from "../../CollectionItem.jsx";
+import CollectionItem from "./CollectionItem.jsx";
+import {CollectionsItems} from "../../../services/collections.service.jsx";
 const Collections = () => {
+    const [item, setItems] = useState([])
+    useEffect(() => {
+        const fetchData = async () => {
+            const data = await CollectionsItems.getAll()
+            setItems(data)
+        }
+        fetchData()
+    }, [])
     return (
         <main className={styles.mainBox}>
             {/*block1*/}
@@ -13,7 +22,11 @@ const Collections = () => {
                     </div>
                 </div>
             </div>
-            <CollectionItem/>
+            <div className={styles.boxCards}>
+                {item.length ? item.map(items =>
+                    <CollectionItem key={items.id} item={items}/>
+                ):<div>There Are no items :(</div>}
+            </div>
         </main>
     );
 };
