@@ -71,6 +71,7 @@ const Home = () => {
     return (
         <main className={styles.home} style={{overflow: "hidden"}}>
             <div ref={myRef}></div>
+            asdasdasd
             {/*fixed right box*/}
             <div className={styles.fixedRightBox}>
                 <div style={{

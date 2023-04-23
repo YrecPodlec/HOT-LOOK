@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './Collections.module.scss';
 import TextComponent from "../../TextComponent/TextComponent.jsx";
+import CollectionItem from "../../CollectionItem.jsx";
 const Collections = () => {
     return (
         <main className={styles.mainBox}>
@@ -12,6 +13,7 @@ const Collections = () => {
                     </div>
                 </div>
             </div>
+            <CollectionItem/>
         </main>
     );
 };
