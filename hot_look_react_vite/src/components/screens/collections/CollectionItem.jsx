@@ -1,6 +1,5 @@
 import React from 'react';
 const CollectionItem = ({item}) => {
-    item.photo = undefined;
     return (
         <div key={item.id}>
             {item.title}
