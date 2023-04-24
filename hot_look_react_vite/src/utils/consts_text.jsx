@@ -7,7 +7,7 @@ export const text_component = [
     {
         id: 2,
         title: "CHOOSE YOUR STYLE",
-        text: "In our catalog \"COLLECTIONS\", there is a large assortment of different styles about images for each style, where you can choose the right one for you"
+        text: "In our catalog \"COLLECTIONS\", there is a large assortment of different styles about photos for each style, where you can choose the right one for you"
     },
     {
         id: 3,
