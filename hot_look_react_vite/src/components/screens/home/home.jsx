@@ -232,7 +232,7 @@ const Home = () => {
                             initial="hidden"
                             whileInView="visible"
                             variants={GirlAnimation}>
-                    <img src="/hot_look_react_vite/public/collabWomans.svg" alt="" className={styles.collabGirl}/>
+                    <img src="/collabWomans.svg" alt="" className={styles.collabGirl}/>
                 </motion.div>
             </div>
         </main>
