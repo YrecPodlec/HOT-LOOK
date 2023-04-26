@@ -1,15 +1,32 @@
-@import "../../../styles/index.scss";
-.mainBox{
-  width: 100%;
-}
-.textComp{
-  width: 50%;
-}
-.boxCards{
-  background-color: rgba(93, 225, 0, 0.32);
-  margin: $margin $margin 0 $margin;
-  display: flex;
-  justify-content: space-around;
-}
+@import "../../../index";
 
-// COLLECTIONS item
+.collection_card{
+  max-width: 800px;
+  border: 3px solid white;
+  & h1{
+    font-size: $Font64;
+    border-bottom: $borderText;
+    @apply mx-3
+  }
+  & p{
+    font-size: $Font16;
+    @apply mx-3 my-3
+  }
+  @apply flex
+
+}
+.pointer_hand{
+  transition: all .5s;
+  @apply mx-3
+}
+.link_see_images{
+  @apply flex
+}
+.link_see_images:hover{
+  & .pointer_hand{
+    @apply mx-11
+  }
+}
+.box_collections_items{
+  @apply my-16 flex justify-around flex-wrap;
+}

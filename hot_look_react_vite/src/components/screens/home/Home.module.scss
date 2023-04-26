@@ -1,4 +1,4 @@
-@import "../../../styles/index.scss";
+@import "../../../index";
 .home{
   width: 100%;
 }
@@ -35,6 +35,7 @@
   padding: 7px 33px 7px 33px;
   border-radius: 33px;
   transition: all .4s ease-in-out;
+  display: inline-flex;
 }
 .hand_point{
   opacity: 0;

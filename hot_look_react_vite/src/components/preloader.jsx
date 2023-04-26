@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/index.scss'
+import '../index.scss'
 const Preloader = () => {
     return (
         <div className="loading">

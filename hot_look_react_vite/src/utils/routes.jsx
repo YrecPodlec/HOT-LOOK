@@ -1,11 +1,13 @@
-import {HOME,
+import {
+    HOME,
     COLLECTIONS,
     CLOTHES,
     COLLABORATIONS,
     CHOOSE_STYLE,
     INFORMATION,
     ACCOUNT,
-    LOGIN} from "./consts.jsx";
+    LOGIN, IMAGE
+} from "./consts.jsx";
 import Home from "../components/screens/home/home.jsx";
 import Collections from "../components/screens/collections/collections.jsx";
 import Clothes from "../components/screens/clothes/clothes.jsx";
@@ -14,6 +16,7 @@ import ChooseStyle from "../components/screens/choose_style/choose_style.jsx";
 import Information from "../components/screens/information/information.jsx";
 import Login from "../components/screens/login/login.jsx";
 import Account from "../components/screens/account/account.jsx";
+import ImagePage from '../components/screens/collections/ImagePage.jsx'
 
 export const authRoutes = [
     {
@@ -50,5 +53,9 @@ export const publicRoutes = [
     {
         path: LOGIN,
         Component: Login
+    },
+    {
+        path: IMAGE,
+        Component: ImagePage
     }
 ]
