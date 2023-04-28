@@ -8,15 +8,6 @@ import {motion, useScroll, useSpring} from 'framer-motion'
 import {Link} from "react-router-dom";
 import ScrollBar from "./ScrollBar.jsx";
 const Home = () => {
-
-
-    // const [offsetY, setOffsetY] = useState(1);
-    // const handleScroll = () => setOffsetY(window.pageYOffset);
-    // useEffect(() => {
-    //     window.addEventListener('scroll', handleScroll);
-    //     return () => window.removeEventListener('scroll', handleScroll);
-    // }, [])
-
     const TextAnimation = {
         hidden: {
             x: -150,

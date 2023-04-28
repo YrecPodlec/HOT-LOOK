@@ -6,7 +6,7 @@ import {
     CHOOSE_STYLE,
     INFORMATION,
     ACCOUNT,
-    LOGIN, IMAGE
+    LOGIN, IMAGE, SUNSHINE
 } from "./consts.jsx";
 import Home from "../components/screens/home/home.jsx";
 import Collections from "../components/screens/collections/collections.jsx";
@@ -17,6 +17,7 @@ import Information from "../components/screens/information/information.jsx";
 import Login from "../components/screens/login/login.jsx";
 import Account from "../components/screens/account/account.jsx";
 import ImagePage from '../components/screens/collections/ImagePage.jsx'
+import ItemSunshine from "../components/screens/collections/ItemSunshine.jsx";
 
 export const authRoutes = [
     {
@@ -57,5 +58,9 @@ export const publicRoutes = [
     {
         path: IMAGE,
         Component: ImagePage
-    }
+    },
+    {
+        path: SUNSHINE,
+        Component: ItemSunshine
+    },
 ]

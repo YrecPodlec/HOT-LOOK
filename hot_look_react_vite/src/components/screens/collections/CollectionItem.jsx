@@ -2,9 +2,24 @@ import React from 'react';
 import styles from './Collections.module.scss'
 import {Link} from "react-router-dom";
 import {IMAGE} from "../../../utils/consts.jsx";
+import {motion} from "framer-motion";
+
 const CollectionItem = ({item}) => {
+    const AnimationCard = {
+        hidden: {
+            y: -150,
+            opacity: 0
+        },
+        visible: {
+            y: 0,
+            opacity: 1
+        }
+    }
     return (
-        <div key={item.id} className={styles.collection_card}>
+        <motion.div key={item.id} className={styles.collection_card}
+                    initial="hidden"
+                    whileInView="visible"
+                    variants={AnimationCard}>
             <img src={item.photo} alt={item.photo} height="400" width="282"/>
             <div style={{display: "flex", justifyContent: "space-around", flexDirection: "column"}}>
                 <div>
@@ -18,7 +33,7 @@ const CollectionItem = ({item}) => {
                         {item.click}</Link>
                 </div>
             </div>
-        </div>
+        </motion.div>
     );
 };
 

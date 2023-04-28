@@ -12,9 +12,8 @@
     font-size: $Font16;
     margin: 12px;
   }
-
   display: flex;
-  margin-bottom: 288px;
+  margin-bottom: 5vh;
 
 }
 .pointer_hand{
@@ -39,9 +38,24 @@
 }
 .background_image_box{
   border-radius: 25px;
-  background: transparent linear-gradient(150deg, rgba(243, 61, 110, 0.3) 0%, rgba(173, 0, 159, 0.3) 100%) 0% 0% no-repeat padding-box
+  background: transparent linear-gradient(150deg, rgba(243, 61, 110, 0.3) 0%, rgba(173, 0, 159, 0.3) 100%) 0% 0% no-repeat padding-box;
+  & h1{
+    font-size: $Font32;
+  }
+  & p{
+    font-size: $Font16;
+  }
+  & div{
+    margin-top: 0;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+  }
+  &:hover > div{
+    margin-top: -35px;
+  }
 }
 .image_box{
+  margin-top: $margin;
   display: flex;
   justify-content: space-between;
   text-align: center;
