@@ -1,4 +1,4 @@
-import React, {useRef} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import {Canvas} from "@react-three/fiber";
 import styles from "./Home.module.scss";
 import TextComponent from "../../TextComponent/TextComponent.jsx";
@@ -6,6 +6,7 @@ import {CHOOSE_STYLE, COLLABORATIONS, COLLECTIONS} from "../../../utils/consts.j
 import Blob from "../../blob/blob.jsx";
 import {motion, useScroll, useSpring} from 'framer-motion'
 import {Link} from "react-router-dom";
+import ScrollBar from "./ScrollBar.jsx";
 const Home = () => {
 
 
@@ -43,13 +44,11 @@ const Home = () => {
     const BlobAnimate = {
         hidden:{
             x: -400,
-            opacity: 0,
-            rotate: -90
+            opacity: 0
         },
         visible: {
             x: 0,
             opacity: 1,
-            rotate: 0,
             transition: {delay: .9, duration: 1}
         }
     }
@@ -64,10 +63,10 @@ const Home = () => {
             transition: {delay: .3, duration: 1}
         }
     }
+
+
     const myRef = useRef(null)
     const executeScroll = () => myRef.current.scrollIntoView()
-    const { scrollYProgress } = useScroll();
-    const scaleX = useSpring(scrollYProgress);
     return (
         <main className={styles.home} style={{overflow: "hidden"}}>
             <div ref={myRef}></div>
@@ -76,12 +75,7 @@ const Home = () => {
                 <div style={{
                     height: "100%", display: "flex", flexDirection: "column", justifyContent: "space-between"
                 }}>
-                    <div className={styles.scroolBox}>
-                        <motion.div
-                            className={styles.scrollBar}
-                            style={{scaleX}}>
-                        </motion.div>
-                    </div>
+                    <ScrollBar/>
                     <motion.button onClick={executeScroll}
                             style={{margin: "0 auto 5vh auto", backgroundColor: "rgba(0, 0, 0, 0)", border: "none"}}
                     whileHover={{scale: 1.15}} whileTap={{scale: 0.9}}>
@@ -120,7 +114,7 @@ const Home = () => {
             {/*block 2*/}
             <div className={styles.block_home} style={{marginTop: "-100px"}}>
                 {/*text block*/}
-                <motion.div style={{width: "50%"}}>
+                <motion.div style={{width: "50%"}} >
                     <motion.div initial="hidden"
                                 whileInView="visible"
                                 variants={TextAnimation} custom={1}>
@@ -160,17 +154,21 @@ const Home = () => {
                 <motion.div className={styles.block3_text}>
                     <motion.h1 initial="hidden"
                                whileInView="visible"
-                               variants={TextAnimation} custom={1}>Why choose HOT LOOK?</motion.h1>
+                               variants={TextAnimation} custom={1}>Why choose HOT LOOK?
+                    </motion.h1>
+                    {/*BLOB*/}
                     <motion.div className={styles.blob}
                          initial="hidden"
                          whileInView="visible"
-                         variants={BlobAnimate}>
+                         variants={BlobAnimate}
+                        >
                         <div>
-                            <Canvas camera={{position: [0.0, 0.0, 8.0]}}>
+                            <Canvas camera={{position: [0.0, 0.0, 8.0]}} style={{overflow: "visible"}}>
                                 <Blob/>
                             </Canvas>
                         </div>
                     </motion.div>
+                    {/*BLOCK*/}
                 </motion.div>
                 {/*text right*/}
                 <motion.div className={styles.block3_text} initial="hidden"

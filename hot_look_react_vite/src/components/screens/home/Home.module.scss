@@ -68,18 +68,12 @@
   height: 100vh;
 }
 //blob
-.blob{
-  width: 100%;
-  height: 70vh;
-}
 .blob > div{
-  background-color: #07b39b;
-  width: 75%;
-  height: 80%;
-  margin: 0 auto;
-  position: relative;
-  top: 10%;
+  display: flex;
+  width: 90%;
+  height: 80vh;
 }
+// FIXED Scroll Line
 .fixedRightBox{
   position: fixed;
   height: 100vh;
@@ -88,19 +82,16 @@
   z-index: 999;
 }
 .scroolBox{
-  //background-color: red;
-  width: 36px;
-  height: 60vh;
-  margin: 5vh auto;
+  background-color: rgb(243, 61, 110);
+  width: 8px;
+  height: 52vh;
+  margin: 15vh auto;
+  border-radius: 25px;
+  display: flex;
+  justify-content: space-around;
 }
-.scrollBar{
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 10px;
-  width: 15px;
-  background: var(--red);
-  transform-origin: 0;
-  background-color: red;
+.progress_bar{
+  width: 100%;
+  background-color: #5de100;
+  border-radius: 25px;
 }

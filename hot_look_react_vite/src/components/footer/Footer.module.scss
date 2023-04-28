@@ -9,9 +9,10 @@
   margin-top: -.5vh;
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 .footer_content{
-  width: 30%;
+  width: 600px;
   border-top: $borderText;
   margin-top: 5vh;
   display: flex;

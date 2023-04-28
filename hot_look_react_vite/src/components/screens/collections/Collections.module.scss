@@ -5,36 +5,44 @@
   & h1{
     font-size: $Font64;
     border-bottom: $borderText;
-    @apply mx-3
+    margin-right: 12px;
+    margin-left: 12px;
   }
   & p{
     font-size: $Font16;
-    @apply mx-3 my-3
+    margin: 12px;
   }
-  @apply flex mb-72
+
+  display: flex;
+  margin-bottom: 288px;
 
 }
 .pointer_hand{
   transition: all .5s;
-  @apply mx-3
+  margin-right: 12px;
+  margin-left: 12px;
 }
 .link_see_images{
-  @apply flex
+  display: flex;
 }
 .link_see_images:hover{
   & .pointer_hand{
-    @apply mx-11
+    margin-right: 44px;
+    margin-left: 44px;
   }
 }
 .box_collections_items{
-  @apply my-16 flex justify-around flex-wrap;
+  margin-top: $margin;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 .background_image_box{
   border-radius: 25px;
   background: transparent linear-gradient(150deg, rgba(243, 61, 110, 0.3) 0%, rgba(173, 0, 159, 0.3) 100%) 0% 0% no-repeat padding-box
 }
 .image_box{
-  @apply flex;
+  display: flex;
   justify-content: space-between;
   text-align: center;
   font-size: $Font32;

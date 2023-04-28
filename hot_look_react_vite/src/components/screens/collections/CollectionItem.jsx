@@ -6,7 +6,7 @@ const CollectionItem = ({item}) => {
     return (
         <div key={item.id} className={styles.collection_card}>
             <img src={item.photo} alt={item.photo} height="400" width="282"/>
-            <div className='flex flex-col justify-around'>
+            <div style={{display: "flex", justifyContent: "space-around", flexDirection: "column"}}>
                 <div>
                     <h1 >{item.title}</h1>
                     <p>{item.description}</p>

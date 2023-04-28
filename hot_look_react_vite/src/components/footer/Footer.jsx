@@ -1,6 +1,8 @@
 import React from 'react';
 import styles from "./Footer.module.scss";
 import {navbar_consts} from "../../utils/consts_navbar.jsx";
+import {Link} from "react-router-dom";
+import {HOME} from "../../utils/consts.jsx";
 const Footer = () => {
     const links = navbar_consts;
     return (
@@ -18,20 +20,20 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className={styles.footer_content}>
-                    <div style={{display: "flex", justifyContent: "center"}}>
-                        <img src="/svg_hot_look.svg" alt=""
-                             style={{width: "112px", height: "112px"}}/>
+                    <div style={{display: "flex", justifyContent: "space-around"}}>
+                        <img src="/svg_hot_look.svg" alt=""/>
                     </div>
-                    <div style={{
-                        display: "flex", justifyContent: "space-between"
-                    }}>
-                        <div style={{fontSize: "32px"}}>
+                    <div style={{display: "flex", justifyContent: "space-between"}}>
+                        <div>
                             <h1>HOT LOOK</h1>
-                            <p style={{color: "white"}}>Find Your Style</p>
+                            <p>Find Your Style!</p>
                         </div>
-                        <div style={{fontSize: "32px"}}>
-                            <h1>DEVELOPER:</h1>
-                            <a href="" style={{color: "white", textDecoration: "none"}}>Yuri Verbitsky</a>
+                        <div>
+                            <h1>DEVELOPER</h1>
+                            <Link to={HOME}
+                                  style={{fontSize: "16px"}}>
+                                Yuri Verbitsky Corp
+                            </Link>
                         </div>
                     </div>
                 </div>
