@@ -1,5 +1,4 @@
-@import "../../../index";
-
+@import "../../../index.scss";
 .collection_card{
   max-width: 800px;
   border: 3px solid white;
@@ -12,7 +11,7 @@
     font-size: $Font16;
     @apply mx-3 my-3
   }
-  @apply flex
+  @apply flex mb-72
 
 }
 .pointer_hand{
@@ -29,4 +28,17 @@
 }
 .box_collections_items{
   @apply my-16 flex justify-around flex-wrap;
+}
+.background_image_box{
+  border-radius: 25px;
+  background: transparent linear-gradient(150deg, rgba(243, 61, 110, 0.3) 0%, rgba(173, 0, 159, 0.3) 100%) 0% 0% no-repeat padding-box
+}
+.image_box{
+  @apply flex;
+  justify-content: space-between;
+  text-align: center;
+  font-size: $Font32;
+  p{
+    color: #5de100;
+  }
 }

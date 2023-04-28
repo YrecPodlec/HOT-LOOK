@@ -23,4 +23,11 @@ export const text_component = [
             "when choosing a style, you will go to the image\n" +
             "selection page of this style"
     },
+    {
+        id: 5,
+        title: "CHOOSE YOUR OWN IMAGE",
+        text: "You are presented with a selection of Images of your \n" +
+            "chosen Style! You can choose the appropriate one and \n" +
+            "go to the purchase page of this image"
+    }
 ]
