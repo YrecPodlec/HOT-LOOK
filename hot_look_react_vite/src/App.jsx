@@ -7,17 +7,17 @@ import Footer from "./components/footer/Footer.jsx";
 
 function App() {
   return (
-    <BrowserRouter>
-        <NavBar/>
-        <AppRouter/>
-        <footer>
-            <div>
-                <div style={{marginTop: "-25vh", overflow: "hidden"}}>
-                    <Footer/>
-                </div>
-            </div>
-        </footer>
-    </BrowserRouter>
+      <BrowserRouter>
+          <NavBar/>
+          <AppRouter/>
+          <footer>
+              <div>
+                  <div style={{marginTop: "-25vh", overflow: "hidden"}}>
+                      <Footer/>
+                  </div>
+              </div>
+          </footer>
+      </BrowserRouter>
   )
 }
 

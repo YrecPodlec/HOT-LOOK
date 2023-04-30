@@ -1,0 +1,26 @@
+.bit_text_filter{
+  & img{
+    transition: .4s ease-in-out;
+  }
+}
+.bit_text_filter.active{
+  & img{
+    transform: rotate(0deg);
+  }
+}
+.bit_text_filter.inactive{
+  & img{
+    transform: rotate(180deg);
+    margin-top: -5px;
+  }
+}
+.big_menu_filter{
+  overflow: hidden;
+  transition: all .9s ease-in-out;
+}
+.big_menu_filter.active{
+  height: 100%;
+}
+.big_menu_filter.inactive{
+  height: 0;
+}

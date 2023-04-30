@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import styles from './Collections.module.scss';
 import TextComponent from "../../TextComponent/TextComponent.jsx";
 import CollectionItem from "./CollectionItem.jsx";
-import {CollectionsItems} from "../../../services/collections.service.jsx";
+import {CollectionItems} from "../../../services/collections.service.jsx";
 import '../../../index.scss';
 import {motion} from "framer-motion";
 
@@ -17,14 +17,15 @@ const Collections = () => {
             opacity: 1
         }
     }
-    const [item, setItems] = useState([])
-    useEffect(() => {
-        const fetchData = async () => {
-            const data = await CollectionsItems.getAll()
-            setItems(data)
-        }
-        fetchData()
-    }, [])
+    // const [item, setItems] = useState([])
+    // useEffect(() => {
+    //     const fetchData = async () => {
+    //         const data = await CollectionsItems.getAll()
+    //         setItems(data)
+    //     }
+    //     fetchData()
+    // }, [])
+    const item = CollectionItems;
     return (
         <main style={{marginBottom: "288px"}}>
             {/*block1*/}
