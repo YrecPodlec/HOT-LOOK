@@ -3,18 +3,9 @@ import styles from './Collections.module.scss'
 import {Link} from "react-router-dom";
 import {IMAGE} from "../../../utils/consts.jsx";
 import {motion} from "framer-motion";
+import {AnimationCard} from "../../../utils/const_animations.jsx";
 
 const CollectionItem = ({item}) => {
-    const AnimationCard = {
-        hidden: {
-            y: -150,
-            opacity: 0
-        },
-        visible: {
-            y: 0,
-            opacity: 1
-        }
-    }
     return (
         <motion.div key={item.id} className={styles.collection_card}
                     initial="hidden"

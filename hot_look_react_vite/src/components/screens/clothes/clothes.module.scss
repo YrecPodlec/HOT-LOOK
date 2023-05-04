@@ -1,6 +1,6 @@
 @import "../../../index.scss";
 .main_block{
-  margin: 144px $margin 288px $margin;
+  margin: $marginTop $margin 288px $margin;
   display: flex;
 }
 .filter_bar{

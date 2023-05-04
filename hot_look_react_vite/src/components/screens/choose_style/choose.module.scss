@@ -1,0 +1,46 @@
+@import "../../../index";
+.title_box{
+  border-top: $borderText;
+  border-bottom: $borderText;
+  text-align: center;
+  margin: $marginTop $margin 0 $margin;
+  & h1{
+    font-size: $Font64;
+  }
+  & p{
+    font-size: $Font32;
+  }
+}
+.block_question{
+  padding-bottom: 256px;
+  & .question_box_big{
+    margin: $margin $margin 0 $margin;
+    border-bottom: $borderText;
+    & h1{
+      font-size: $Font32;
+      color: white;
+    }
+    & p{
+      font-size: $Font32;
+    }
+    & .questions_input{
+      display: flex;
+      & div{
+        display: flex;
+        & p{
+          margin-left: 15px;
+          align-items: center;
+          display: flex;
+        }
+      }
+    }
+  }
+}
+.btn_sub{
+  background: transparent linear-gradient(180deg, #960028 0%, #E7003E 100%) 0% 0% no-repeat padding-box;
+  padding: 15px;
+  float: right;
+  margin-top: $margin;
+  margin-right: $margin;
+  font-size: $Font32;
+}

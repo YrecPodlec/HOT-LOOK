@@ -3,6 +3,7 @@ import styles from "./clothes.module.scss";
 import './filter_btn.scss'
 import {ClothesBase} from "../../../utils/const_clothes.jsx";
 import {motion} from "framer-motion";
+import {AnimationCard, TextAnimation} from "../../../utils/const_animations.jsx";
 
 const Clothes = () => {
     const clothesBasa = ClothesBase;
@@ -11,7 +12,10 @@ const Clothes = () => {
         <main>
             <div className={styles.main_block}>
                 {/*filter bar*/}
-                <div className={styles.filter_bar}>
+                <motion.div className={styles.filter_bar}
+                            initial="hidden"
+                            whileInView="visible"
+                            variants={TextAnimation} custom={1}>
                     <div className={styles.filter_bar_btn}>
                         <div className={`bit_text_filter ${open ? 'active' : 'inactive'}`}
                              style={{display: "flex"}}
@@ -126,11 +130,15 @@ const Clothes = () => {
                             </div>
                         </div>
                     </div>
-                </div>
+                </motion.div>
                 <div className={styles.clothes_box}>
                     {
                         clothesBasa.length ? clothesBasa.map(item => (
-                            <motion.div key={item.id} className={styles.clothes_item} whileHover={{scale: 1.05}}>
+                            <motion.div key={item.id} className={styles.clothes_item}
+                                        initial="hidden"
+                                        whileInView="visible"
+                                        variants={AnimationCard}
+                                        whileHover={{scale: 1.05}}>
                                 <div style={{
                                     width: "51px", height: "45px", position: "relative", zIndex: "999", marginLeft: "auto",
                                     marginRight: "15px"}}>

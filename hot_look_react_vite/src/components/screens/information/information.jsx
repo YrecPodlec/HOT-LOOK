@@ -1,10 +1,13 @@
 import React from 'react';
-
+import styles from './information.module.scss';
 const Information = () => {
     return (
-        <div>
-            information
-        </div>
+        <main>
+            {/*first block*/}
+            <div className={styles.first_block}>
+
+            </div>
+        </main>
     );
 };
 

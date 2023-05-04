@@ -1,0 +1,30 @@
+@import "../../../index";
+.main_block{
+  margin: $marginTop $margin 0 $margin;
+  display: flex;
+  justify-content: space-between;
+}
+.block_one_side{
+  width: 50%;
+  & p{
+    font-size: $Font32;
+  }
+}
+.text_block{
+  border-top: $borderText;
+  border-bottom: $borderText;
+  margin: 20% auto 0 auto;
+  & h1{
+    font-size: $Font64;
+  }
+  & p{
+    font-size: $Font32;
+  }
+}
+.fixedRightBox{
+  position: fixed;
+  height: 100vh;
+  width: 65px;
+  right: 0;
+  z-index: 999;
+}

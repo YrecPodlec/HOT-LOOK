@@ -7,55 +7,8 @@ import Blob from "../../blob/blob.jsx";
 import {motion, useScroll, useSpring} from 'framer-motion'
 import {Link} from "react-router-dom";
 import ScrollBar from "./ScrollBar.jsx";
+import {BlobAnimate, GirlAnimation, TextAnimation, WaveAnimation} from '../../../utils/const_animations.jsx'
 const Home = () => {
-    const TextAnimation = {
-        hidden: {
-            x: -150,
-            opacity: 0
-        },
-        visible: custom => ({
-            x: 0,
-            opacity: 1,
-            transition: {
-                delay: custom * 0.4
-            }
-        })
-    }
-    const GirlAnimation = {
-        hidden: {
-            x: 150,
-            opacity: 0
-        },
-        visible: {
-            x: 0,
-            opacity: 1,
-            transition: {delay: .6}
-        }
-    }
-    const BlobAnimate = {
-        hidden:{
-            x: -400,
-            opacity: 0
-        },
-        visible: {
-            x: 0,
-            opacity: 1,
-            transition: {delay: .9, duration: 1}
-        }
-    }
-    const WaveAnimation = {
-        hidden: {
-            y: 50,
-            opacity: 0
-        },
-        visible: {
-            y: 0,
-            opacity: 1,
-            transition: {delay: .3, duration: 1}
-        }
-    }
-
-
     const myRef = useRef(null)
     const executeScroll = () => myRef.current.scrollIntoView()
     return (

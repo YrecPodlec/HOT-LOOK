@@ -10,13 +10,13 @@ function App() {
       <BrowserRouter>
           <NavBar/>
           <AppRouter/>
-          <footer>
-              <div>
-                  <div style={{marginTop: "-25vh", overflow: "hidden"}}>
-                      <Footer/>
-                  </div>
-              </div>
-          </footer>
+          {/*<footer>*/}
+          {/*    <div>*/}
+          {/*        <div style={{marginTop: "-25vh", overflow: "hidden"}}>*/}
+          {/*            <Footer/>*/}
+          {/*        </div>*/}
+          {/*    </div>*/}
+          {/*</footer>*/}
       </BrowserRouter>
   )
 }
