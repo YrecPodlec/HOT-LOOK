@@ -7,5 +7,5 @@ export const INFORMATION = '/information'
 
 export const ACCOUNT = '/account'
 export const LOGIN = '/login'
-export const IMAGE = '/image'
+export const IMAGE = "/images"
 export const SUNSHINE = '/sunshine'

@@ -1,12 +1,15 @@
-import React, {useEffect, useState} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import styles from './Collections.module.scss';
 import TextComponent from "../../TextComponent/TextComponent.jsx";
 import CollectionItem from "./CollectionItem.jsx";
-import {CollectionItems} from "../../../services/collections.service.jsx";
+import {CollectionsItems} from "../../../services/collections.service.jsx";
 import '../../../index.scss';
 import {motion} from "framer-motion";
+import {AllCollections} from "../../../http/getImages.jsx";
+import {observer} from "mobx-react-lite";
+import {Context} from "../../../main.jsx";
 
-const Collections = () => {
+const Collections = observer(() => {
     const TextAnimation = {
         hidden: {
             x: -150,
@@ -17,15 +20,16 @@ const Collections = () => {
             opacity: 1
         }
     }
-    // const [item, setItems] = useState([])
-    // useEffect(() => {
-    //     const fetchData = async () => {
-    //         const data = await CollectionsItems.getAll()
-    //         setItems(data)
-    //     }
-    //     fetchData()
-    // }, [])
-    const item = CollectionItems;
+    const {items} = useContext(Context)
+    const [item, setItems] = useState([])
+    useEffect(() => {
+        const fetchData = async () => {
+            const data = await CollectionsItems.getAll()
+            setItems(data)
+        }
+        fetchData()
+        AllCollections().then(data => items.setCollections(data))
+    }, [])
     return (
         <main style={{marginBottom: "288px"}}>
             {/*block1*/}
@@ -40,11 +44,11 @@ const Collections = () => {
             </motion.div>
             <div className={styles.box_collections_items}>
                 {item.length ? item.map(items =>
-                    <CollectionItem key={items.id} item={items}/>
+                    <CollectionItem key={items.id} items={items}/>
                 ):<div>There Are no items :(</div>}
             </div>
         </main>
     );
-};
+});
 
 export default Collections;

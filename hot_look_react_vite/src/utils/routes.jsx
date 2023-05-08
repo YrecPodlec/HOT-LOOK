@@ -56,7 +56,7 @@ export const publicRoutes = [
         Component: Login
     },
     {
-        path: IMAGE,
+        path: IMAGE + '/:id',
         Component: ImagePage
     },
     {
