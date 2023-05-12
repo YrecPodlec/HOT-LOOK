@@ -9,10 +9,10 @@ const CollectionItem = ({items}) => {
     const history = useNavigate();
     return (
         <motion.div key={items._id}
-                    onClick={() => history(IMAGE + '/' + items._id)}
                     className={styles.collection_card}
                     initial="hidden"
                     whileInView="visible"
+                    viewport={{ once: true }}
                     variants={AnimationCard}>
             <img src={items.photo} alt={items.photo} height="400" width="282"/>
             <div style={{display: "flex", justifyContent: "space-around", flexDirection: "column"}}>

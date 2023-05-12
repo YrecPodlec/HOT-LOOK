@@ -1,0 +1,54 @@
+@import "../../../index";
+//IMAGES
+.box_collections_items{
+  margin: $marginTop $margin 250px $margin;
+  min-height: 70vh;
+}
+.title_box_images{
+  width: 60%;
+  h1{
+    font-size: $Font64;
+  }
+  p{
+    font-size: $Font32;
+  }
+}
+.box_text_info_images{
+  margin-top: calc($margin / 3);
+  border-top: $borderText;
+  border-bottom: $borderText;
+}
+.container_images_box{
+  display: flex;
+  justify-content: space-between;
+  margin-top: $margin;
+  flex-wrap: wrap;
+}
+.box_cards_images {
+  border-radius: 25px;
+  background: transparent
+  linear-gradient(150deg, rgba(243, 61, 110, 0.3) 0%,
+                  rgba(173, 0, 159, 0.3) 100%) 0 0
+  no-repeat padding-box;
+  width: 320px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 15px;
+  margin: 15px;
+  h1{
+    padding: 10px;
+  }
+  p{
+    font-size: $Font32;
+    color: #5de100;
+  }
+  cursor: pointer;
+  transition: all .4s ease-in-out;
+}
+.box_image_card{
+  border-radius: 25px;
+  overflow: hidden;
+  width: 100%;
+  height: 480px;
+}
