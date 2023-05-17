@@ -1,0 +1,11 @@
+@import "../../../index";
+.big_block_login{
+  margin: $marginTop $margin 0 $margin;
+  display: flex;
+  .block_50_login{
+    width: 50%;
+    justify-content: space-around;
+    display: flex;
+    margin: 0 auto;
+  }
+}

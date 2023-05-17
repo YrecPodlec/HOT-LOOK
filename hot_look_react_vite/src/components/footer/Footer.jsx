@@ -23,7 +23,7 @@ const Footer = () => {
                     <div style={{display: "flex", justifyContent: "space-around"}}>
                         <img src="/svg_hot_look.svg" alt=""/>
                     </div>
-                    <div style={{display: "flex", justifyContent: "space-between"}}>
+                    <div className={styles.block_medium}>
                         <div>
                             <h1>HOT LOOK</h1>
                             <p>Find Your Style!</p>
@@ -37,7 +37,13 @@ const Footer = () => {
                         </div>
                     </div>
                 </div>
-                <div className={styles.footer_content}></div>
+                <div className={styles.footer_content}>
+                    <div className={styles.license_block}>
+                        <img src="/licensia.svg" alt=""/>
+                        <div>&#8226; Information about license</div>
+                        <div>&#8226; Site Map</div>
+                    </div>
+                </div>
             </div>
         </footer>
     );

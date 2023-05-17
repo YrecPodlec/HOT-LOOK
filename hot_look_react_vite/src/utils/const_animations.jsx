@@ -41,7 +41,7 @@ export const WaveAnimation = {
     visible: {
         y: 0,
         opacity: 1,
-        transition: {delay: .3, duration: 1}
+        transition: {duration: 1}
     }
 }
 export const AnimationCard = {

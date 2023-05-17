@@ -2,3 +2,197 @@
 .first_block{
   margin: $marginTop $margin 0 $margin;
 }
+.block_into_first_block_observ{
+  width: 100%;
+  display: flex;
+}
+.text_block_inform{
+  width: 50%;
+  .text_block_inform_text{
+    border-top: $borderText;
+    border-bottom: $borderText;
+    h1{
+      font-size: $Font64;
+    }
+    p{
+      font-size: $Font32;
+    }
+  }
+}
+.box_girl_img_info{
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+}
+.hot_look_team_first_block{
+  margin: calc($margin * 2 * -1) $margin 0 $margin;
+  .text_block_team{
+    border-top: $borderText;
+    border-bottom: $borderText;
+    text-align: center;
+    h1{
+      font-size: $Font64;
+    }
+    p{
+      font-size: $Font32;
+    }
+  }
+}
+.block_contact_us{
+  text-align: center;
+  margin-top: $margin;
+  h1{
+    font-size: $Font64;
+  }
+}
+.contact_us_big_block_3{
+  margin: $margin $margin 0 $margin;
+  display: flex;
+  .block_into_block_3_contacts{
+    width: 50%;
+    .inputs_blocks{
+      width: 70%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      Button{
+        margin-top: 24px;
+      }
+      textarea {
+        letter-spacing: 3px;
+        resize: none;
+        border-radius: 5px;
+        font-size: 24px;
+        padding: 10px;
+        font-family: hot_look;
+        box-shadow: 1px 1px 1px #999;
+      }
+      .btn_resume{
+        display: flex;
+        align-items: center;
+        align-content: center;
+        Button{
+          p{
+            margin: 0 14px 0 0;
+            padding: 0;
+          }
+        }
+        p{
+          margin: 0 28px 0 0;
+          padding: 0;
+          font-size: 16px;
+        }
+      }
+      input{
+        background-color: rgba(93, 225, 0, 0.5);
+        border: none;
+        padding: 15px;
+        border-radius: 24px;
+        width: 100%;
+        color: white;
+        font-family: hot_look;
+        letter-spacing: 3px;
+        font-size: 24px;
+        margin-bottom: 24px;
+      }
+      ::-webkit-input-placeholder {
+        color: white;
+        font-family: hot_look;
+        letter-spacing: 3px;
+      }
+    }
+    div{
+      p{
+        font-size: $Font32;
+        margin-top: calc($margin / 2);
+      }
+      h1{
+        font-size: $Font64;
+        border-top: $borderText;
+      }
+    }
+  }
+}
+.block_4_contacts{
+  margin: $margin $margin 0 $margin;
+  display: flex;
+  .block_into_contact_block{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    .contact_icon_block{
+      display: flex;
+      align-items: center;
+      margin-top: 12px;
+      p{
+        margin-left: 24px;
+        font-size: 24px;
+      }
+    }
+    h1{
+      font-size: $Font64;
+    }
+    .block_right_contcts{
+      display: flex;
+      flex-direction: column;
+      text-align: right;
+      h2{
+        font-size: $Font64;
+      }
+      p{
+        font-size: $Font32;
+      }
+      h1{
+        font-size: $Font64;
+        border-top: $borderText;
+      }
+    }
+  }
+}
+.articles_block{
+  margin: $margin $margin 0 $margin;
+  .block_article{
+    display: flex;
+    .article_block_into{
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      img{
+        margin: $margin auto;
+      }
+      h1{
+        font-size: $Font64;
+        border-top: $borderText;
+      }
+      h2{
+        font-size: $Font64;
+      }
+      p{
+        font-size: $Font32;
+        margin-top: $margin;
+      }
+    }
+  }
+}
+.any_quastions_block{
+  margin: 0 $margin 0 $margin;
+  display: flex;
+  .block_into_questions{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    img{
+      margin: 0 auto;
+    }
+    h1{
+      font-size: $Font64;
+      border-top: $borderText;
+    }
+    p{
+      font-size: $Font32;
+    }
+    .btn_contacts_questions{
+      margin-top: calc($margin * 3);
+    }
+  }
+}

@@ -8,6 +8,7 @@ import {motion, useScroll, useSpring} from 'framer-motion'
 import {Link} from "react-router-dom";
 import ScrollBar from "./ScrollBar.jsx";
 import {BlobAnimate, GirlAnimation, TextAnimation, WaveAnimation} from '../../../utils/const_animations.jsx'
+import Footer from "../../footer/Footer.jsx";
 const Home = () => {
     const myRef = useRef(null)
     const executeScroll = () => myRef.current.scrollIntoView()
@@ -43,28 +44,31 @@ const Home = () => {
                             initial="hidden"
                             whileInView="visible"
                             variants={GirlAnimation}>
-                    <img src="/girls_home.png" alt=""/>
+                    <div>
+                        <img src="/girls_home.png" alt=""/>
+                    </div>
                 </motion.div>
             </div>
             <motion.img src="/wave 1.svg" alt=""
                         initial="hidden"
                         whileInView="visible"
                         variants={WaveAnimation}
+                        viewport={{ once: true }}
                         style={{
                 width: "100vw",
                 position: "relative",
-                top: "-20vh"
+                top: "-12vw"
             }}/>
             {/*block 2*/}
             <div className={styles.block_home} style={{marginTop: "-100px"}}>
                 {/*text block*/}
-                <motion.div style={{width: "50%"}} >
+                <motion.div className={styles.text_block_2}>
                     <motion.div initial="hidden"
                                 whileInView="visible"
                                 variants={TextAnimation} custom={1}>
                         <TextComponent itemId={2}/>
                     </motion.div>
-                    <motion.div style={{marginTop: "100px"}}
+                    <motion.div className={styles.btn_style_home}
                                 initial="hidden"
                                 whileInView="visible"
                                 variants={TextAnimation} custom={2}>
@@ -81,7 +85,9 @@ const Home = () => {
                             initial="hidden"
                             whileInView="visible"
                             variants={GirlAnimation}>
-                    <img src="/home_collections.jpg" alt="" className={styles.img_home}/>
+                    <div>
+                        <img src="/home_collections.jpg" alt="" className={styles.img_home}/>
+                    </div>
                 </motion.div>
             </div>
             <motion.img src="/wave 2.svg" alt=""
@@ -118,26 +124,28 @@ const Home = () => {
                 <motion.div className={styles.block3_text} initial="hidden"
                             whileInView="visible"
                             variants={GirlAnimation}>
-                    <p>
-                        1. HOTLOOK is a unique platform where a huge
-                        assortment of different types of styles and
-                        images is collected
-                        <br/><br/>
-                        No need to search on different platforms for
-                        what you want, everything you need is in
-                        HOTLOOK!
-                        <br/><br/>
-                        2. Need a cosplay costume? Go to the
-                        <Link to={COLLABORATIONS}>"COLLABORATIONS"</Link> to find the image you need!
-                        <br/><br/>
-                        When ordering goods, there are also
-                        promotions!
-                        <br/><br/>
-                        3. Don't know which style suits you? Go to
-                        <Link to={CHOOSE_STYLE}>"CHOOSE STYLE"</Link> to take a small test, the result
-                        will return suggestions for which style you
-                        should choose!
-                    </p>
+                    <div>
+                        <p>
+                            1. HOTLOOK is a unique platform where a huge
+                            assortment of different types of styles and
+                            images is collected
+                            <br/><br/>
+                            No need to search on different platforms for
+                            what you want, everything you need is in
+                            HOTLOOK!
+                            <br/><br/>
+                            2. Need a cosplay costume? Go to the
+                            <Link to={COLLABORATIONS}>"COLLABORATIONS"</Link> to find the image you need!
+                            <br/><br/>
+                            When ordering goods, there are also
+                            promotions!
+                            <br/><br/>
+                            3. Don't know which style suits you? Go to
+                            <Link to={CHOOSE_STYLE}>"CHOOSE STYLE"</Link> to take a small test, the result
+                            will return suggestions for which style you
+                            should choose!
+                        </p>
+                    </div>
                 </motion.div>
             </div>
             <motion.img src="/wave 1.svg" alt=""
@@ -151,13 +159,13 @@ const Home = () => {
             {/*block 4*/}
             <div className={styles.block_home}>
                 {/*text block*/}
-                <div style={{width: "50%"}}>
+                <div className={styles.collab_block_text}>
                     <motion.div initial="hidden"
                                 whileInView="visible"
                                 variants={TextAnimation} custom={1}>
                         <TextComponent itemId={3}/>
                     </motion.div>
-                    <motion.div style={{marginTop: "100px"}}
+                    <motion.div className={styles.btn_style_home}
                                 initial="hidden"
                                 whileInView="visible"
                                 variants={TextAnimation} custom={2}>

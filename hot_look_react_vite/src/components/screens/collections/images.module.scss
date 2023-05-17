@@ -8,9 +8,15 @@
   width: 60%;
   h1{
     font-size: $Font64;
+    @media (max-width: 500px) {
+    font-size: 32px;
+  }
   }
   p{
     font-size: $Font32;
+    @media (max-width: 500px) {
+    font-size: 16px;
+  }
   }
 }
 .box_text_info_images{
@@ -42,6 +48,9 @@
   p{
     font-size: $Font32;
     color: #5de100;
+    @media (max-width: 500px) {
+      font-size: 16px;
+    }
   }
   cursor: pointer;
   transition: all .4s ease-in-out;

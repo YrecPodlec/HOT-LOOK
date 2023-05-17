@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom';
 import { OneCollection } from '../../../http/getImages.jsx';
 import styles from './images.module.scss'
 import {motion} from 'framer-motion';
+import {CircularProgress} from "@mui/material";
 
 const ImagePage = () => {
     const TextAnimation = {
@@ -58,7 +59,10 @@ const ImagePage = () => {
     return (
         <div className={styles.box_collections_items}>
             {loadingData ? (
-                <div>Loading...</div>
+                <div style={{display: "flex", flexDirection: "column", alignItems: "center"}}>
+                    <CircularProgress color="secondary"/>
+                    <h1 style={{marginTop: "64px"}}>LOADING...</h1>
+                </div>
             ) : (
                 <div >
                     {image ? (
