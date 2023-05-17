@@ -13,7 +13,7 @@ function App() {
       <BrowserRouter>
           <AppRouter/>
           <NavBar/>
-          {/*<Footer/>*/}
+          <Footer/>
       </BrowserRouter>
       </Provider>
   )
