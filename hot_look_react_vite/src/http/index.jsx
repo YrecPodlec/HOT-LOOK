@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const $host = axios.create({
-    baseURL: 'https://hotlookserver.onrender.com'
+    baseURL: process.env.REACT_APP_API_URL
 })
 
 export {
