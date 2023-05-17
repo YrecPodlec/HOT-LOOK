@@ -2,7 +2,7 @@ import axios from "axios";
 
 export const CollectionsItems = {
     async getAll(){
-        const response = await axios.get(process.env.REACT_APP_API_URL)
+        const response = await axios.get("https://hotlookserver.onrender.com/collections")
         return response.data
     }
 }
