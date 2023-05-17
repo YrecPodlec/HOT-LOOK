@@ -13,7 +13,9 @@ function App() {
       <BrowserRouter>
           <AppRouter/>
           <NavBar/>
-          <Footer/>
+          <div style={{marginTop: "-248px"}}>
+              <Footer/>
+          </div>
       </BrowserRouter>
       </Provider>
   )

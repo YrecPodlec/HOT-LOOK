@@ -8,6 +8,7 @@ import {motion} from "framer-motion";
 import {AllCollections} from "../../../http/getImages.jsx";
 import {observer} from "mobx-react-lite";
 import {Context} from "../../../main.jsx";
+import {CircularProgress} from "@mui/material";
 
 const Collections = observer(() => {
     const TextAnimation = {
@@ -45,7 +46,9 @@ const Collections = observer(() => {
             <div className={styles.box_collections_items}>
                 {item.length ? item.map(items =>
                     <CollectionItem key={items.id} items={items}/>
-                ):<div>There Are no items :(</div>}
+                ):<div style={{display: "flex", flexDirection: "column"}}>
+                    <CircularProgress color="secondary"/>
+                    <p>LOADING...</p></div>}
             </div>
         </main>
     );
